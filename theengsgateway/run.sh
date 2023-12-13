@@ -3,7 +3,7 @@ set -e
 
 CONFIG="/root/theengsgw.conf"
 
-bashio::log.info "Creating TheengsGateway configuration...4"
+bashio::log.info "Creating TheengsGateway configuration..."
 
 # Create TheengsGateway config
 MQTT_HOST=$(bashio::config 'MQTT_HOST')
