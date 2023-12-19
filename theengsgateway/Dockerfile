@@ -7,6 +7,8 @@ RUN apt-get update && apt-get upgrade -y && \
 ENV current /root
 ENV HOME $current
 WORKDIR $current
+COPY TheengsDecoder-1.6.4.post1.dev8+gca18584.tar.gz /root
+RUN pip3 install TheengsDecoder-1.6.4.post1.dev8+gca18584.tar.gz
 COPY run.sh /root
 COPY entrypoint.sh /root
 RUN chmod a+x /root/run.sh
