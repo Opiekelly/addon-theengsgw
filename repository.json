@@ -1,5 +1,5 @@
 {
-  "name": "TheengsGateway HA Add-on TEST ONLY",
-  "url": "https://github.com/theengs/addon-theengsgw",
-  "maintainer": "Mihai Ambrosie <mihsu81@hotmail.com>"
+  "name": "TheengsGateway HA Add-on Opiekelly",
+  "url": "https://github.com/Opiekelly/addon-theengsgw",
+  "maintainer": "Brendan Kelly opiekelly@hotmail.com"
 }
