@@ -2,13 +2,18 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 LABEL io.hass.version="1.9.0" io.hass.type="addon" io.hass.arch="armv7|armhf|aarch64|i386|amd64"
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install --no-install-recommends -y build-essential bluez python3-pip python3-dev && \
-    pip3 install --extra-index-url=https://www.piwheels.org/simple TheengsGateway==1.2.0
+    apt-get install --no-install-recommends -y build-essential bluez python3-pip python3-dev git
+RUN git clone https://github.com/theengs/gateway.git
+RUN python3 -m pip install --upgrade pip -y && \
+    pip install setuptools-scm --upgrade -y  && \
+    pip install wheel --upgrade -y
+ENV current /root/gateway
+WORKDIR $current
+RUN git submodule init && git submodule update
+RUN pip install . --upgrade
 ENV current /root
 ENV HOME $current
 WORKDIR $current
-COPY TheengsDecoder-1.6.4.post1.dev8+gca18584.tar.gz /root
-RUN pip3 install TheengsDecoder-1.6.4.post1.dev8+gca18584.tar.gz
 COPY run.sh /root
 COPY entrypoint.sh /root
 RUN chmod a+x /root/run.sh
