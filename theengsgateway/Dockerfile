@@ -6,6 +6,7 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN python3 -m pip install --upgrade pip && \
     pip install setuptools-scm --upgrade && \
     pip install wheel --upgrade
+WORKDIR /root
 RUN git clone https://github.com/theengs/gateway.git    
 WORKDIR /root/gateway
 RUN git submodule init && git submodule update
