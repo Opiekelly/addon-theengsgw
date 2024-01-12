@@ -1,5 +1,5 @@
 [![ha_badge](https://img.shields.io/badge/Home%20Assistant-Add%20On-blue.svg)](https://www.home-assistant.io/)
-# [TheengsGateway](https://theengs.github.io/gateway/) Home Assistant supervisor add-on
+# [TheengsGateway](https://theengs.github.io/gateway/) Home Assistant supervisor add-on with fixes
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
